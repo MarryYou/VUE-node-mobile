@@ -150,6 +150,7 @@
 	#main {
 		flex: 1;
 		margin-top: 56px;
+		margin-bottom: 36px;
 		background: #FFFFFF;
 		.tabs__bar {
 			font-size: 0.375rem !important;
@@ -248,10 +249,10 @@
 			}
 		}
 	 .item-loadingMore {
+			 	 padding-top: 0.312rem;
+			 	 height: 1.25rem;
 			div{
 				height: 30px !important;
-				margin-top: 0.312rem;
-				padding-top: 0.937rem;
 				width: 30px !important;
 			}
 		}

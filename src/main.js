@@ -5,6 +5,8 @@ import Vuetify from 'vuetify'
 import axios from 'axios'
 import moment from 'moment'
 import('../node_modules/vuetify/dist/vuetify.min.css') 
+import infiniteScroll from 'vue-infinite-scroll'
+Vue.use(infiniteScroll)
 Vue.prototype.$http = axios
 Vue.use(Vuetify)
 Vue.use(moment)
