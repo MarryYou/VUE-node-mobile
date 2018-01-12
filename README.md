@@ -1,7 +1,10 @@
 # mydemo
 
-> hehe
-
+> vue练手项目 基于 cnode 社区 开源api  非商用仅限学习
+  UI框架 vuetifyjs ：  https://vuetifyjs.com/
+  时间插件 moment  ：  http://momentjs.cn/
+  图标 ：material     https://material.io/icons/ 和 font awesome
+  技术站 ： vue全家桶学习研究
 ## Build Setup
 
 ``` bash
