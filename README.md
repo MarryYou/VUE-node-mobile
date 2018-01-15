@@ -5,6 +5,7 @@
   时间插件 moment  ：  http://momentjs.cn/
   图标 ：material     https://material.io/icons/ 和 font awesome
   技术站 ： vue全家桶学习研究
+ ![](https://upload-images.jianshu.io/upload_images/259-90ac0f366310f464.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
 ## Build Setup
 
 ``` bash
