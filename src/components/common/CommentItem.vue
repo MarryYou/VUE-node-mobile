@@ -26,9 +26,9 @@
 		name:'',
 		props:['info'],
 		created(){
-        console.log(this.info)
+       
 		},
-		data() {
+		data(){
 			return {
               toogleFlag:true
 			}

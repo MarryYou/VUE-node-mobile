@@ -35,6 +35,7 @@
 export default {
   name: 'app',
   created(){
+  	window.localStorage.setItem('AccessToken','')  
   },
   data(){
   	return {
@@ -87,6 +88,29 @@ export default {
   },
   watch:{
   	$route(val,oldval){
+  		switch (val.name){
+  			 case 'main':
+  			  this.bar ={ 'class': 'light-green lighten-1', dark: true };
+  			  this.e2 = 0
+  				break;
+  			 case '':
+  			  this.bar ={ 'class': 'light-green lighten-1', dark: true };
+  			  this.e2 = 0
+  				break;
+  				case 'Create':
+  			  this.bar ={ 'class': 'teal lighten-1', dark: true };
+  			  this.e2 = 1
+  				break;
+  				case 'About':
+  			  this.bar ={ 'class': 'lime  lighten-1', dark: true };
+  			  this.e2 = 2
+  				break;
+  				case 'Login':
+  			  this.bar ={ 'class': 'blue  lighten-1', dark: true };
+  			  this.e2 = 3
+  				break;
+  				
+  		}
       if(val.name == 'Article'||val.name == 'User'){
       	    this.isBackFlag = true
       }else{
@@ -112,6 +136,16 @@ export default {
   width: 100% !important;
   height: 100% !important;
   color: #2c3e50;
+  .ql-container.ql-snow{
+  	border-color: #eee;
+  }
+  .ql-toolbar.ql-snow{
+  	border-color: #eee;
+  
+  }
+  .ql-editor{
+  	border: 1px solid #eee;
+  }
   .tabs__wrapper{
 			overflow-x: hidden !important;
 		}

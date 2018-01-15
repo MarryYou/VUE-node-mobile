@@ -77,9 +77,10 @@
 						title: '问答',
 						tab: 'ask',
 						id: 3
-					}, {
-						title: '招聘',
-						tab: 'job',
+					},
+					{
+						title: '测试',
+						tab: 'dev',
 						id: 4
 					}
 				],

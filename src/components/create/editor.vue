@@ -1,8 +1,8 @@
 <template>
-	<div id="create">
+	<div id="editor">
         <div class="create-title">
         <h6>标题</h6>
-		<input type="text" v-model="title"  placeholder="标题长度必须超过10个字符"/>
+		<input type="text"  placeholder="title"/>
         </div>
         <div class="select-type">
         <h6>分类</h6>
@@ -11,7 +11,7 @@
 		<quill-editor class="editor-tool" v-model="content" ref="myQuillEditor" :options="editorOption" @blur="onEditorBlur($event)" @focus="onEditorFocus($event)" @ready="onEditorReady($event)">		
 		</quill-editor>
 		    <div class="commit-btn">
-                <v-btn  color="teal lighten-1" dark @click="release()">发布</v-btn>
+                <v-btn  color="teal lighten-1" dark>发布</v-btn>
              </div>
 	</div>
 </template>
@@ -28,13 +28,13 @@
 		},
 		data() {
 		return {
-		tags :['share','ask','job','dev'],
+		tags :['分享','问答','招聘','测试'],
+		items:['all','good','share','ask','job'],
         shareTag:'',
         content: ``,
-        title:'',
         editorOption: {
           modules: {
-          toolbar: [
+            toolbar: [
               [{ 'size': ['small', false, 'large', 'huge'] }],
               ['bold', 'italic', 'underline', 'strike'],
               [{ 'align': [] }],
@@ -43,7 +43,7 @@
               [{ 'script': 'sub' }, { 'script': 'super' }],
               [{ 'color': [] }, { 'background': [] }],
               ['image']
-          ]
+            ]
           }
         }
      }
@@ -52,25 +52,6 @@
 			quillEditor
 		},
 		methods: {
-			release(){
-				if(this.title&&this.content&&this.shareTag&&this.title.length>10){
-				let url = 'https://cnodejs.org/api/v1/topics'
-				if( window.localStorage.getItem('AccessToken').length > 0){
-					this.$http.post(url,{
-						accesstoken :window.localStorage.getItem('AccessToken'),
-						title:this.title,
-						tab:this.shareTag,
-						content:this.content
-					}).then(res=>{
-						console.log(res)
-					})
-				}else{
-				 alert('请先登录!')
-				 this.$router.push({path:'/login'})
-				}
-				//
-				}
-			},
 			setShareTag(tag,index){
 				this.shareTag = tag
 				this.$refs.btnIndex.forEach(function(item){
@@ -111,9 +92,8 @@
 </script>
 
 <style lang="less" scoped="scoped">
-	#create {
+	#editor {
 		text-align: left;
-		margin-top: 56px;
 		.create-title{
 			margin-top: 0.312rem;
 		}
@@ -137,9 +117,9 @@
 			display: inline-block;
 		}
 		.editor-tool{
-			height: 9.375rem;
+			height: 7.5rem;
 			text-align: left;
-			  .ql-toolbar.ql-snow{
+			 .ql-toolbar.ql-snow{
 				border-color: #eee;
 			}
 		}
@@ -150,7 +130,7 @@
 		}
 		.commit-btn{
              width: 100%;
-             margin-top: 1.718rem;
+             margin-top: 1.875rem;
              padding-top: 0.468rem;
              button{
              	display: block;             

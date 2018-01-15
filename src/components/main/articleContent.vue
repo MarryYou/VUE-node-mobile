@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	    <h6><img v-show="articleContent.top" src="../../assets/top.gif"/>&nbsp;&nbsp;{{articleContent.title}}</h6>
-	    <div class="article-content" ref='content'></div>
+	    <div class="article-content" ref='content' v-html="articleContent.content"></div>
 	    <div class="line"></div>
 	    <div class="comment">
 	      <h6>评论</h6>
@@ -58,6 +58,17 @@
 			}
 		},
 		methods: {
+		 htmlDecodeByRegExp (str){  
+             var s = "";
+             if(str.length == 0) return "";
+             s = str.replace(/&amp;/g,"&");
+             s = s.replace(/&lt;/g,"<");
+             s = s.replace(/&gt;/g,">");
+             s = s.replace(/&nbsp;/g," ");
+             s = s.replace(/&#39;/g,"\'");
+             s = s.replace(/&quot;/g,"\"");
+             return s;  
+      },
 			getArticleInfo(){
 				let url = 'https://cnodejs.org/api/v1/topic/'+this.articleId
 				let _self = this
@@ -65,7 +76,10 @@
 					if(!res){
 					this.loadingFlag = false
 					}else{
-					this.articleContent = res.data.data	
+					this.articleContent = res.data.data
+			    	//this.articleContent.content = this.articleContent.content.replace('<div class="markdown-text"><p>&lt;p&gt;','<div class="markdown-text"><p>')
+			    	//this.articleContent.content = this.articleContent.content.replace('&lt;/p&gt;</p>\n</div>','</p>\n</div>')
+					console.log(this.articleContent)
 					if(	this.articleContent.replies){
 						this.commentFlag = true
 					}
@@ -75,6 +89,7 @@
 					},1500)				
 					this.imgSrc = this.articleContent.author.avatar_url
 					this.name = this.articleContent.author.loginname
+					this.articleContent.content = this.htmlDecodeByRegExp(this.articleContent.content)
 					this.$refs.content.innerHTML = this.articleContent.content
 					console.log(this.articleContent)
 					}
