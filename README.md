@@ -8,7 +8,7 @@
  
 #截图展示
 
-##主页
+##主页  
 ![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/main.png?raw=true)
 
 ##创建主题
