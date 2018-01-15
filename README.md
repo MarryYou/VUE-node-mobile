@@ -6,26 +6,26 @@
   图标 ：material     https://material.io/icons/ 和 font awesome
   技术站 ： vue全家桶学习研究
 
-#截图展示
->##主页  
+# 截图展示
+## 主页展示 
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/main.png?raw=true)
 
->##创建主题
+## 创建主题
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/create.png?raw=true)
 
->##关于作者
+## 关于作者
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/about.png?raw=true)
 
->##登陆token
+## 登陆token
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/login.png?raw=true)
 
->##文章详情
+## 文章详情
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/article.png?raw=true)
 
->##评论列表
+## 评论列表
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/comment.png?raw=true)
 
->##用户详情
+## 用户详情
 >![](https://github.com/MarryYou/VUE-node-mobile/blob/master/src/assets/personInfo.png?raw=true)
 
 ## Build Setup
