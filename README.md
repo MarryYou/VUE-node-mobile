@@ -1,11 +1,11 @@
 # mydemo
 
 > vue练手项目 基于 cnode 社区 开源api  非商用仅限学习
-  项目展示地址：https://marryyou.github.io/showProject/
-  UI框架 vuetifyjs ：  https://vuetifyjs.com/
-  时间插件 moment  ：  http://momentjs.cn/
-  图标 ：material     https://material.io/icons/ 和 font awesome
-  技术站 ： vue全家桶学习研究
+> 项目展示地址：https://marryyou.github.io/showProject/
+> UI框架 vuetifyjs ：  https://vuetifyjs.com/
+> 时间插件 moment  ：  http://momentjs.cn/
+> 图标 ：material     https://material.io/icons/ 和 font awesome
+> 技术站 ： vue全家桶学习研究
 
 # 截图展示
 ## 主页展示 
